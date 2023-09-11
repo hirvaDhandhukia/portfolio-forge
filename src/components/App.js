@@ -43,12 +43,12 @@ class App extends Component {
         <div className="container-fluid">
           <div className="row">
             <div className='col-12 col-sm-6'>
-              {/* calling the functional component */}
-              
-
+              {/* calling the form component */}
+              Form
             </div>
             <div className="col-12 col-sm-6">
-              
+              {/* calling the code component */}
+              Code
             </div>
           </div>
         </div>
