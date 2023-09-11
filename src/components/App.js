@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import Header from "./Bootstrap/Header";
+import Form from './Form';
+import Code from './Code';
 
 
 class App extends Component {
@@ -44,11 +46,11 @@ class App extends Component {
           <div className="row">
             <div className='col-12 col-sm-6'>
               {/* calling the form component */}
-              Form
+              <Form />
             </div>
             <div className="col-12 col-sm-6">
               {/* calling the code component */}
-              Code
+              <Code />
             </div>
           </div>
         </div>
