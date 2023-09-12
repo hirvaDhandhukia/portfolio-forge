@@ -6,18 +6,8 @@ import Code from './Code';
 
 class App extends Component {
   state = {
-    Dark: true
-  };
-
-  // toggle to dark & light modes
-  toggleHeader = () => {
-    this.setState({
-      Dark: !this.state.Dark
-    });
-  };
-
-  render() {
-    const Data = {
+    Dark: true,
+    FormData: {
       FirstName : "VALUE OF FirstName",
       Description : "VALUE OF Description",
       KeyWords : "VALUE OF KeyWords",
@@ -30,6 +20,29 @@ class App extends Component {
       Email : "VALUE OF Email",
       LinkedIn : "VALUE OF LinkedIn"
     }
+  };
+
+  // toggle to dark & light modes
+  toggleHeader = () => {
+    this.setState({
+      Dark: !this.state.Dark
+    });
+  };
+
+  render() {
+    // const Data = {
+    //   FirstName : "VALUE OF FirstName",
+    //   Description : "VALUE OF Description",
+    //   KeyWords : "VALUE OF KeyWords",
+    //   FullName : "VALUE OF FullName",
+    //   Thumbnail : "VALUE OF Thumbnail",
+    //   URL : "VALUE OF URL",
+    //   Occupation : "VALUE OF Occupation",
+    //   Address : "VALUE OF Address",
+    //   Github : "VALUE OF Github",
+    //   Email : "VALUE OF Email",
+    //   LinkedIn : "VALUE OF LinkedIn"
+    // }
 
     return (
       <div className="App">
@@ -60,13 +73,15 @@ class App extends Component {
           <div className="row">
             <div className='col-12 col-sm-6'>
               {/* calling the form component */}
-              <Form />
+              <Form
+                FormData={this.state.FormData}
+              />
             </div>
             <div className="col-12 col-sm-6">
               {/* calling the code component */}
-              {/* <Code props={this.state} /> */}
               <Code 
-                {...Data}
+                // {...Data}
+                {...this.state.FormData}
               />
             </div>
           </div>
