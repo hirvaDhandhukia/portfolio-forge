@@ -18,7 +18,7 @@ const Code = ({
     <div className='Code'>
         <pre 
             className='border rounded bg-grey p-3' 
-            style={{ color: 'black'}}
+            style={{ color: 'black', height: '650px'}}
         >
         {/* <pre 
             className= {props.Dark ? "Header border rounded bg-grey p-3" : " Header border rounded bg-dark p-3"} 
