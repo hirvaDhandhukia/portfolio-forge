@@ -17,6 +17,20 @@ class App extends Component {
   };
 
   render() {
+    const Data = {
+      FirstName : "VALUE OF FirstName",
+      Description : "VALUE OF Description",
+      KeyWords : "VALUE OF KeyWords",
+      FullName : "VALUE OF FullName",
+      Thumbnail : "VALUE OF Thumbnail",
+      URL : "VALUE OF URL",
+      Occupation : "VALUE OF Occupation",
+      Address : "VALUE OF Address",
+      Github : "VALUE OF Github",
+      Email : "VALUE OF Email",
+      LinkedIn : "VALUE OF LinkedIn"
+    }
+
     return (
       <div className="App">
         <Header dark={this.state.Dark} className="Header">
@@ -50,7 +64,10 @@ class App extends Component {
             </div>
             <div className="col-12 col-sm-6">
               {/* calling the code component */}
-              <Code />
+              {/* <Code props={this.state} /> */}
+              <Code 
+                {...Data}
+              />
             </div>
           </div>
         </div>
@@ -61,3 +78,4 @@ class App extends Component {
 }
 
 export default App;
+//  {...Data} :- here ... is called the spread operator

@@ -1,32 +1,50 @@
 import React from 'react'
-// import { CodeSnippet } from '@carbon/react'
 
-
-const Code = () => {
+const Code = ({
+    FirstName,
+    Description,
+    KeyWords,
+    FullName,
+    Thumbnail,
+    URL,
+    Occupation,
+    Address,
+    Github,
+    Email,
+    LinkedIn
+}) => {
+    
   return (
     <div className='Code'>
-        <pre className='border rounded bg-grey p-3'>
+        <pre 
+            className='border rounded bg-grey p-3' 
+            style={{ color: 'black'}}
+        >
+        {/* <pre 
+            className= {props.Dark ? "Header border rounded bg-grey p-3" : " Header border rounded bg-dark p-3"} 
+            style={props.Dark ? {color: 'black'} : {color: 'white'}}
+        > */}
             {`
  <!DOCTYPE HTML>
  <html>
      <head>
      <meta charset="utf-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>PORTFOLIO_FirstName's Website</title>
+     <title>${FirstName}'s Website</title>
      <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta name="description" content="PORTFOLIO_Description" />
-     <meta name="keywords" content="PORTFOLIO_KeyWords" />
-     <meta name="author" content="PORTFOLIO_FullName" />
+     <meta name="description" content="${Description}" />
+     <meta name="keywords" content="${KeyWords}" />
+     <meta name="author" content="${FullName}" />
  
    <!-- Facebook and Twitter integration -->
-     <meta property="og:title" content="PORTFOLIO_FullName"/>
-     <meta property="og:image" content="PORTFOLIO_Thumbnail"/>
-     <meta property="og:url" content="PORTFOLIO_URL"/>
+     <meta property="og:title" content="${FullName}"/>
+     <meta property="og:image" content="${Thumbnail}"/>
+     <meta property="og:url" content="${URL}"/>
      <meta property="og:site_name" content=""/>
      <meta property="og:description" content=""/>
-     <meta name="twitter:title" content="PORTFOLIO_FullName" />
-     <meta name="twitter:image" content="PORTFOLIO_Thumbnail" />
-     <meta name="twitter:url" content="PORTFOLIO_URL" />
+     <meta name="twitter:title" content="${FullName}" />
+     <meta name="twitter:image" content="${Thumbnail}" />
+     <meta name="twitter:url" content="${URL}" />
      <meta name="twitter:card" content="" />
  
      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -66,8 +84,8 @@ const Code = () => {
          <aside id="colorlib-aside" class="border js-fullheight">
              <div class="text-center">
                  <div class="author-img" style="background-image: url(https://i.imgur.com/eKA8zjR.jpg);"></div>
-                 <h1 id="colorlib-logo"><a href="#">PORTFOLIO_FullName</a></h1>
-                 <span class="position"><a href="#">PORTFOLIO_Occupation</a> PORTFOLIO_Address</span>
+                 <h1 id="colorlib-logo"><a href="#">${FullName}</a></h1>
+                 <span class="position"><a href="#">${Occupation}</a> ${Address}</span>
              </div>
              <nav id="colorlib-main-menu" class="navbar">
                  <div id="navbar" class="collapse">
@@ -86,10 +104,10 @@ const Code = () => {
                  Copyright <script>document.write(new Date().getFullYear());</script> All rights reserved. Made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> <span>Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></span> <span>Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash.com</a></span></small></p>
                  <ul style="background-color: #2c98f0;">
-                     <li><a href="PORTFOLIO_Github"><i class="icon-github"></i></a></li>
+                     <li><a href="${Github}"><i class="icon-github"></i></a></li>
                      <li><a href="#"><i class="icon-twitter2"></i></a></li>
-                     <li><a href="PORTFOLIO_Email"><i class="icon-mail"></i></a></li>
-                     <li><a href="PORTFOLIO_LinkedIn"><i class="icon-linkedin2"></i></a></li>
+                     <li><a href="${Email}"><i class="icon-mail"></i></a></li>
+                     <li><a href="${LinkedIn}"><i class="icon-linkedin2"></i></a></li>
                  </ul>
              </div>
  
@@ -108,10 +126,9 @@ const Code = () => {
                                     <div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
                                         <div class="slider-text-inner js-fullheight">
                                             <div class="desc">
-                                                <h1>Hi! <br>I'm PORTFOLIO_FirstName</h1>
-                                                <h2>PORTFOLIO_Description
-                                             </h2>
-                                                 <p><a class="btn btn-primary btn-learn">View Resume <i class="icon-download4"></i></a></p>
+                                                <h1>Hi! <br>I'm ${FirstName}</h1>
+                                                <h2> ${Description}</h2>
+                                                <p><a class="btn btn-primary btn-learn">View Resume <i class="icon-download4"></i></a></p>
                                              </div>
                                         </div>
                                     </div>
