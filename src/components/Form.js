@@ -1,9 +1,18 @@
 import React from 'react'
+import FormGroup from './Bootstrap/FormGroup'
 
-const Form = () => {
+const Form = ({ FormData }) => {
   return (
     <div className='Form'>
-        Form
+        <h3>Basic Info</h3>
+        <p>
+            {Object.keys(FormData).map(
+                fd =>
+                    Object.keys(Desc).includes(fd) && (
+                        <FormGroup />
+                    )
+            )}
+            </p>
     </div>
   )
 }
