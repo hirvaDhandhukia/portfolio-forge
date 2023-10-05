@@ -9,15 +9,16 @@ class App extends Component {
     Dark: true,
     FormData: {
       FirstName : "VALUE OF FirstName",
+      LastName: "VALUE OF LaastName",
+      // FullName : "VALUE OF FullName",
       Description : "VALUE OF Description",
       KeyWords : "VALUE OF KeyWords",
-      FullName : "VALUE OF FullName",
       Thumbnail : "VALUE OF Thumbnail",
       URL : "VALUE OF URL",
-      Occupation : "VALUE OF Occupation",
       Address : "VALUE OF Address",
-      Github : "VALUE OF Github",
+      Occupation : "VALUE OF Occupation",
       Email : "VALUE OF Email",
+      Github : "VALUE OF Github",
       LinkedIn : "VALUE OF LinkedIn"
     }
   };
@@ -81,7 +82,10 @@ class App extends Component {
               {/* calling the code component */}
               <Code 
                 // {...Data}
-                {...this.state.FormData}
+                {...this.state.FormData} 
+                FullName={
+                  this.state.FormData.FirstName + " " + this.state.FormData.LastName
+                }
               />
             </div>
           </div>

@@ -7,12 +7,13 @@ const Form = ({ FormData }) => {
         <h3>Basic Info</h3>
         <p>
             {Object.keys(FormData).map(
-                fd =>
-                    Object.keys(Desc).includes(fd) && (
-                        <FormGroup />
-                    )
-            )}
-            </p>
+                fd => (
+                  // Object.keys(Desc).includes(fd) && (
+                  //     <FormGroup />
+                  // )
+                  <FormGroup key={fd} Label={fd} />
+              ))}
+        </p>
     </div>
   )
 }
