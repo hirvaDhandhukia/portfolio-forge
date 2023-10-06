@@ -9,7 +9,7 @@ class App extends Component {
     Dark: true,
     FormData: {
       FirstName : "VALUE OF FirstName",
-      LastName: "VALUE OF LaastName",
+      LastName: "VALUE OF LastName",
       // FullName : "VALUE OF FullName",
       Description : "VALUE OF Description",
       KeyWords : "VALUE OF KeyWords",
@@ -27,6 +27,16 @@ class App extends Component {
   toggleHeader = () => {
     this.setState({
       Dark: !this.state.Dark
+    });
+  };
+
+  // onchange input handler
+  handleChange = e => {
+    this.setState({
+      FormData: {
+        ...this.state.FormData,
+        [e.target.name]: e.target.value
+      }
     });
   };
 
@@ -75,7 +85,8 @@ class App extends Component {
             <div className='col-12 col-sm-6'>
               {/* calling the form component */}
               <Form
-                FormData={this.state.FormData}
+                FormData={{FullName: `${this.state.FormData.FirstName } ${this.state.FormData.LastName}`,
+                ...this.state.FormData}}
               />
             </div>
             <div className="col-12 col-sm-6">

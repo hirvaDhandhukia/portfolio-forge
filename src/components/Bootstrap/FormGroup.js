@@ -9,12 +9,12 @@ const FormGroup = ({
     defaultValue,
     Checked,
     defaultChecked,
-    Placeholder,
+    // Placeholder,
     readOnly,
     Desc
 }) => {
     return (
-      <div className="form-group">
+      <div className="form-group pt-3">
         <label htmlFor={Id}>{Label}</label>
         <input
           type={Type}
@@ -23,7 +23,7 @@ const FormGroup = ({
           name={Id}
           onChange={onChange}
           value={Value}
-          placeholder={Placeholder}
+          // placeholder={Placeholder}
           defaultValue={defaultValue}
           checked={Checked}
           defaultChecked={defaultChecked}
