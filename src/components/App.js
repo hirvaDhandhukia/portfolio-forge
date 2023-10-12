@@ -20,10 +20,23 @@ class App extends Component {
       Email : "",
       Github : "",
       LinkedIn : "",
-      Skills: [],
-      Experience: [],
+      Skills: {
+        Intro: [],
+        Tools: [],
+        Progress: []
+      },
+      Experience: [{
+        Role: "",
+        Company: "",
+        Description: "",
+        Start: "",
+        End: ""
+      }],
       Projects: [],
-      Education: []
+      Education: [{
+        Degree: "",
+        Description: ""
+      }]
     }
   };
 
