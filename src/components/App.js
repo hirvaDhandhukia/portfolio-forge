@@ -19,7 +19,11 @@ class App extends Component {
       Occupation : "",
       Email : "",
       Github : "",
-      LinkedIn : ""
+      LinkedIn : "",
+      Skills: [],
+      Experience: [],
+      Projects: [],
+      Education: []
     }
   };
 
