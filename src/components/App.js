@@ -8,18 +8,18 @@ class App extends Component {
   state = {
     Dark: true,
     FormData: {
-      FirstName : "VALUE OF FirstName",
-      LastName: "VALUE OF LastName",
-      // FullName : "VALUE OF FullName",
-      Description : "VALUE OF Description",
-      KeyWords : "VALUE OF KeyWords",
-      Thumbnail : "VALUE OF Thumbnail",
-      URL : "VALUE OF URL",
-      Address : "VALUE OF Address",
-      Occupation : "VALUE OF Occupation",
-      Email : "VALUE OF Email",
-      Github : "VALUE OF Github",
-      LinkedIn : "VALUE OF LinkedIn"
+      FirstName : "",
+      LastName: "",
+      // FullName : "",
+      Description : "",
+      KeyWords : "",
+      Thumbnail : "",
+      URL : "",
+      Address : "",
+      Occupation : "",
+      Email : "",
+      Github : "",
+      LinkedIn : ""
     }
   };
 
