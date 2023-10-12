@@ -87,6 +87,7 @@ class App extends Component {
               <Form
                 FormData={{FullName: `${this.state.FormData.FirstName } ${this.state.FormData.LastName}`,
                 ...this.state.FormData}}
+                onChange={this.handleChange}
               />
             </div>
             <div className="col-12 col-sm-6">

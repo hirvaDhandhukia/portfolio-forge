@@ -6,10 +6,10 @@ const FormGroup = ({
     Type,
     onChange,
     Value,
-    defaultValue,
+    // defaultValue,
     Checked,
     defaultChecked,
-    // Placeholder,
+    Placeholder,
     readOnly,
     Desc
 }) => {
@@ -23,8 +23,8 @@ const FormGroup = ({
           name={Id}
           onChange={onChange}
           value={Value}
-          // placeholder={Placeholder}
-          defaultValue={defaultValue}
+          placeholder={Placeholder}
+          // defaultValue={defaultValue}
           checked={Checked}
           defaultChecked={defaultChecked}
           aria-describedby={Id + "Help"}

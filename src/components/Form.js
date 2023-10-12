@@ -6,7 +6,7 @@ const Form = ({ FormData, onChange }) => {
     FullName: [
       "text",
       "Full Name",
-      "This is your full name."
+      "This is your full name. (Immutable from here)"
     ],
     FirstName: [
       "text",
@@ -69,26 +69,36 @@ const Form = ({ FormData, onChange }) => {
   return (
     <div className='Form'>
         <h3>Basic Info</h3>
-        <p>
             {Object.keys(FormData).map(
-                fd => (
+                fd => 
                   // <FormGroup key={fd} Label={fd} />
+                  // Placeholder={`Enter ${Desc[fd][1]}`}
                   Object.keys(Desc).includes(fd) && (
                       <FormGroup 
                         key={fd} 
-                        // Label={[fd][1]} 
-                        Label={fd}
+                        Label={Desc[fd][1]} 
                         Type={Desc[fd][1]}
                         Id={fd}
                         Desc={Desc[fd][2]}
                         Value={FormData[fd]}
-                        // Placeholder={`Enter ${Desc[fd][1]}`}
-                        onChange={fd === 'FullName' ? () => {} : onChange}
-                        readOnly={fd === 'FullName' ? true : undefined}
+                        defaultValue={'hi'}
+                        onChange={fd === "FullName" ? () => {} : onChange}
+                        readOnly={fd === "FullName" ? true : undefined}
                       />
                   )
-              ))}
-        </p>
+            )}
+        {/* {Object.keys(FormData).map(fd => (
+          <FormGroup 
+            key={fd}
+            Label={Desc[fd][1]}
+            Type={Desc[fd][1]}
+            Id={fd}
+            Desc={Desc[fd][2]}
+            Value={FormData[fd]}
+            onChange={fd === 'FullName' ? () => {} : onChange}
+            readOnly={fd === 'FullName' ? true : undefined}
+          />
+        ))} */}
 
         {/* <h3>Experience</h3>
         <p>
