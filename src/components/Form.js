@@ -105,11 +105,14 @@ const Form = ({ FormData, onChange }) => {
           ))} */}
 
         <br />
+        <hr />
+        <h2>Demo Data:</h2><pre>(Please change the info through code)</pre>
+
+        <br />
         <h3>Skills</h3>
           {/* <pre>
             {JSON.stringify(FormData.Skills, null, 2)}
           </pre> */}
-        <pre>Introduction here.</pre>
         <Skill Skills={FormData.Skills} />
 
         <br />
