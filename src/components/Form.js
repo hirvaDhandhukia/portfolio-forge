@@ -1,5 +1,9 @@
 import React from 'react'
 import FormGroup from './Bootstrap/FormGroup';
+import Skill from './Form/Skill';
+import Experience from './Form/Experience';
+import Project from './Form/Project';
+import Education from './Form/Education';
 
 const Form = ({ FormData, onChange }) => {
   const Desc = {
@@ -69,57 +73,56 @@ const Form = ({ FormData, onChange }) => {
   return (
     <div className='Form'>
         <h3>Basic Info</h3>
-            {Object.keys(FormData).map(
-                fd => 
-                  // <FormGroup key={fd} Label={fd} />
-                  Object.keys(Desc).includes(fd) && (
-                      <FormGroup 
-                        key={fd} 
-                        Label={Desc[fd][1]} 
-                        Type={Desc[fd][1]}
-                        Id={fd}
-                        Desc={Desc[fd][2]}
-                        Value={FormData[fd]}
-                        defaultValue={'hi'}
-                        Placeholder={`Enter ${Desc[fd][1]}`}
-                        onChange={fd === "FullName" ? () => {} : onChange}
-                        readOnly={fd === "FullName" ? true : undefined}
-                      />
-                  )
-            )}
-        {/* {Object.keys(FormData).map(fd => (
-          <FormGroup 
-            key={fd}
-            Label={Desc[fd][1]}
-            Type={Desc[fd][1]}
-            Id={fd}
-            Desc={Desc[fd][2]}
-            Value={FormData[fd]}
-            onChange={fd === 'FullName' ? () => {} : onChange}
-            readOnly={fd === 'FullName' ? true : undefined}
-          />
-        ))} */}
+          {Object.keys(FormData).map(
+              fd => 
+                // <FormGroup key={fd} Label={fd} />
+                Object.keys(Desc).includes(fd) && (
+                    <FormGroup 
+                      key={fd} 
+                      Label={Desc[fd][1]} 
+                      Type={Desc[fd][1]}
+                      Id={fd}
+                      Desc={Desc[fd][2]}
+                      Value={FormData[fd]}
+                      defaultValue={'hi'}
+                      Placeholder={`Enter ${Desc[fd][1]}`}
+                      onChange={fd === "FullName" ? () => {} : onChange}
+                      readOnly={fd === "FullName" ? true : undefined}
+                    />
+                )
+          )}
+          {/* {Object.keys(FormData).map(fd => (
+            <FormGroup 
+              key={fd}
+              Label={Desc[fd][1]}
+              Type={Desc[fd][1]}
+              Id={fd}
+              Desc={Desc[fd][2]}
+              Value={FormData[fd]}
+              onChange={fd === 'FullName' ? () => {} : onChange}
+              readOnly={fd === 'FullName' ? true : undefined}
+            />
+          ))} */}
 
+        <br />
         <h3>Skills</h3>
-        <pre>
-          {JSON.stringify(FormData.Skills, null, 2)}
-        </pre>
+          {/* <pre>
+            {JSON.stringify(FormData.Skills, null, 2)}
+          </pre> */}
+        <pre>Introduction here.</pre>
+        <Skill Skills={FormData.Skills} />
 
+        <br />
         <h3>Experience</h3>
-        <pre>
-          {JSON.stringify(FormData.Experience, null, 2)}
-        </pre>
+        <Experience Experiences={FormData.Experience} />
 
+        <br />
         <h3>Projects</h3>
-        <pre>
-          {JSON.stringify(FormData.Projects, null, 2)}
-        </pre>
+        <Project Projects={FormData.Projects} />
 
+        <br />
         <h3>Education</h3>
-        <pre>
-          {JSON.stringify(FormData.Education, null, 2)}
-        </pre>
-
+        <Education Educations={FormData.Education} />
         
     </div>
   );

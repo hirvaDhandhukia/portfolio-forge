@@ -20,11 +20,27 @@ class App extends Component {
       Email : "",
       Github : "",
       LinkedIn : "",
-      Skills: {
-        Intro: "",
-        Tools: ["Photoshop", "jQuery", "HTML5", "CSS3", "WordPress", "SEO"],
-        Progress: ["75", "60", "85", "90", "70", "80"]
-      },
+
+      Skills: [{
+        Tools: "Photoshop",
+        Progress: "75"
+      }, {
+        Tools: "jQuery",
+        Progress: "60"
+      }, {
+        Tools: "HTML5",
+        Progress: "85"
+      }, {
+        Tools: "CSS3",
+        Progress: "90"
+      }, {
+        Tools: "WordPress",
+        Progress: "70"
+      }, {
+        Tools: "SEO",
+        Progress: "80"
+      }],
+
       Experience: [{
         Role: "CEO",
         Company: "Pipernet",
@@ -44,6 +60,7 @@ class App extends Component {
         Start: "2017",
         End: "2018"
       }],
+
       Projects: [{
         Name: "Project 01",
         Keyword: "Java",
@@ -53,6 +70,7 @@ class App extends Component {
         Keyword: "Python",
         Github: "github link"
       }],
+      
       Education: [{
         Degree: "Bachelor of Engineering",
         Description: "A 4-year Engineering degree in Information Technology."
