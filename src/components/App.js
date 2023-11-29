@@ -21,21 +21,41 @@ class App extends Component {
       Github : "",
       LinkedIn : "",
       Skills: {
-        Intro: [],
-        Tools: [],
-        Progress: []
+        Intro: "",
+        Tools: ["Photoshop", "jQuery", "HTML5", "CSS3", "WordPress", "SEO"],
+        Progress: ["75", "60", "85", "90", "70", "80"]
       },
       Experience: [{
-        Role: "",
-        Company: "",
-        Description: "",
-        Start: "",
-        End: ""
+        Role: "CEO",
+        Company: "Pipernet",
+        Description: "Working as a CEO of Pipernet, the new internet.",
+        Start: "2017",
+        End: "Present"
+      }, {
+        Role: "Full Stack Developer",
+        Company: "Pied Piper",
+        Description: "Developed the core data compressing algorithm as well as managed the main data-pipelines running in the application.",
+        Start: "2017",
+        End: "2018"
+      }, {
+        Role: "Developer",
+        Company: "Hooli",
+        Description: "Project Manager and Senior developer on various Hooli projects.",
+        Start: "2017",
+        End: "2018"
       }],
-      Projects: [],
+      Projects: [{
+        Name: "Project 01",
+        Keyword: "Java",
+        Github: "github link"
+      }, {
+        Name: "Project 02",
+        Keyword: "Python",
+        Github: "github link"
+      }],
       Education: [{
-        Degree: "",
-        Description: ""
+        Degree: "Bachelor of Engineering",
+        Description: "A 4-year Engineering degree in Information Technology."
       }]
     }
   };
