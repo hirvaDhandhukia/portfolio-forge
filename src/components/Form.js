@@ -1,5 +1,5 @@
 import React from 'react'
-import FormGroup from './Bootstrap/FormGroup'
+import FormGroup from './Bootstrap/FormGroup';
 
 const Form = ({ FormData, onChange }) => {
   const Desc = {
@@ -100,24 +100,24 @@ const Form = ({ FormData, onChange }) => {
           />
         ))} */}
 
-        {/* <h3>Experience</h3>
-        <p>
-            <Experience />
-        </p>
-
-        <h3>Education</h3>
-        <p>
-            <Experience />
-        </p> */}
-
         <h3>Skills</h3>
         <pre>
           {JSON.stringify(FormData.Skills, null, 2)}
         </pre>
 
-        <h3>Interests</h3>
+        <h3>Experience</h3>
         <pre>
-          {JSON.stringify(FormData.Interests, null, 2)}
+          {JSON.stringify(FormData.Experience, null, 2)}
+        </pre>
+
+        <h3>Projects</h3>
+        <pre>
+          {JSON.stringify(FormData.Projects, null, 2)}
+        </pre>
+
+        <h3>Education</h3>
+        <pre>
+          {JSON.stringify(FormData.Education, null, 2)}
         </pre>
 
         
